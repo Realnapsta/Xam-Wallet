@@ -30,7 +30,7 @@
                     <Image Source="logo.png" HeightRequest="900" WidthRequest="900" />
                     <Entry Grid.Row="1" Placeholder="Email or Phone Number" x:Name="primaryKey" PlaceholderColor="#bababa" FontSize="16" />
                     <Entry Grid.Row="2" Placeholder="Password"  IsPassword="true" x:Name="password" PlaceholderColor="#bababa" FontSize="16" />
-                    <Button Text="LOGIN" x:Name="loginbtn" BackgroundColor="#ED272B" TextColor="White" HeightRequest="50" VerticalOptions="StartAndExpand" Grid.Row="3" />
+                    <Button Text="LOGIN" x:Name="loginbtn" Clicked="Loginbtn_Clicked" BackgroundColor="#ED272B" TextColor="White" HeightRequest="50" VerticalOptions="StartAndExpand" Grid.Row="3" />
                     <ActivityIndicator x:Name="activityindicator" IsRunning="{Binding IsBusy}" Grid.Row="4" VerticalOptions="Center" HorizontalOptions=" Center" Color="Lime" />
                     <Grid Grid.Row="5">
                         <Grid.ColumnDefinitions>

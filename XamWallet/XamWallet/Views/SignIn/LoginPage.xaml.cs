@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamWallet.Views.Main;
 
 namespace XamWallet.Views.SignIn
 {
@@ -17,9 +18,17 @@ namespace XamWallet.Views.SignIn
             InitializeComponent();
         }
 
-        void registerbtn_clicked(object sender, System.EventArgs e)
+
+        void Loginbtn_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PushAsync(new RegisterPage());
+            Application.Current.MainPage = new MainShell();
+        }
+
+       public async void registerbtn_clicked(object sender, System.EventArgs e)
+        {
+           
+
+          await Navigation.PushAsync(new RegisterPage());
         }
     }
 }

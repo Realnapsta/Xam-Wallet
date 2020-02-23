@@ -4,7 +4,7 @@ using System.Text;
 
 namespace XamWallet.Models
 {
-    class User
+   public class User
     {
         public string userName { get; set; }
         public string firstName { get; set; }

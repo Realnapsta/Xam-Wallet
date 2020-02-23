@@ -19,6 +19,9 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Views\Settings\" />
+    <Folder Include="Views\Main\" />
   </ItemGroup>
 
   <ItemGroup>

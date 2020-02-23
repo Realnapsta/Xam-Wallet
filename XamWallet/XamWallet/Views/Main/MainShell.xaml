@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:pages="clr-namespace:XamWallet.Views.Main"
+       x:Class="XamWallet.Views.Main.MainShell">
+
+
+    
+          <TabBar>
+        <Tab Title= "Stream" Icon="">
+            <ShellContent>
+                <pages:ReceiptsPage/>
+
+            </ShellContent>
+        </Tab>
+
+        <Tab Title= "Services" Icon="">
+            <ShellContent>
+                <pages:ServicesPage/>
+
+            </ShellContent>
+        </Tab>
+
+               <Tab Title= "Account" Icon="">
+            <ShellContent>
+                <pages:AccountPage/>
+
+            </ShellContent>
+        </Tab>
+    </TabBar>
+
+</Shell>
