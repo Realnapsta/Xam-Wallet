@@ -70,6 +70,8 @@ namespace XamWalletWebApi.Controllers
             ApplicationUser user = new ApplicationUser()
             {
                 UserName = model.UserName,
+                FirstName =  model.FirstName,
+                LastName = model.LastName,
                 Email = model.Email,
                 EmailConfirmed = model.EmailConfirmed,
                 PhoneNumber = model.PhoneNumber

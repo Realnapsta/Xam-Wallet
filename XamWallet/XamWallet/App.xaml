@@ -7,5 +7,68 @@
              x:Class="XamWallet.App">
     <Application.Resources>
 
+        <ResourceDictionary>
+            <Color x:Key="PageBackgroundColor">#FFFFFF</Color>
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="mini1">#006074</Color>
+            <Color x:Key="mini2">#313133</Color>
+            <Color x:Key="mini3">#ED272B</Color>
+            <Color x:Key="mini4">#ED272B</Color>
+            <Color x:Key="HeadingTextColor">#01B375</Color>
+            <Color x:Key="NormalTextColor">#72AD33</Color>
+            <Color x:Key="PrimaryColor">#ED272B</Color>
+
+            <Style x:Key="LabelPageHeadingStyle" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="{StaticResource HeadingTextColor}" />
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+            </Style>
+
+            <Style TargetType="Button" x:Key="detailbtn">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="HeightRequest" Value="35" />
+                <Setter Property="BackgroundColor" Value="Transparent" />
+                <Setter Property="HorizontalOptions" Value="StartAndExpand" />
+                <Setter Property="TextColor" Value="{StaticResource mini4}" />
+            </Style>
+
+            <Style x:Key="addbtn" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="80" />
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+            </Style>
+
+            <Style x:Key="new_addbtn" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryColor}" />
+            </Style>
+            <Style x:Key="refresh_btn" TargetType="Button">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Fill" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="60" />
+                <Setter Property="BackgroundColor" Value="{StaticResource mini1}" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="#292929" />
+                <Setter Property="HeightRequest" Value="50" />
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

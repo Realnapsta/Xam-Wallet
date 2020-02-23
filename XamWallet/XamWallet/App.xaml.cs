@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamWallet.Views.SignIn;
 
 namespace XamWallet
 {
@@ -10,7 +11,7 @@ namespace XamWallet
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SignInShell();
         }
 
         protected override void OnStart()
