@@ -40,7 +40,7 @@
                     <Entry Placeholder="Password"
                            IsPassword="true"
                            x:Name="password"
-                           Text="{Binding Password"
+                           Text="{Binding Password}"
                            HorizontalOptions="FillAndExpand" />
 
                     <Entry Placeholder="confirm password"
