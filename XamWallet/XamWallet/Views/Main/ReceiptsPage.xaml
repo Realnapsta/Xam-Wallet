@@ -2,6 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamWallet.Views.Main.ReceiptsPage">
-    <ContentPage.Content>
-    </ContentPage.Content>
+
+<StackLayout BackgroundColor="AliceBlue">
+
+ <TableView BackgroundColor="Azure">
+
+     <TableRoot>
+         <TableSection Title="TRANSACTIONS">
+
+             <ImageCell ImageSource="" Text="MTN MOBILE MONEY" Detail="Mobile money transaction details will show here"></ImageCell>
+
+         </TableSection>
+
+     </TableRoot>
+ </TableView>
+
+</StackLayout>
+
 </ContentPage>

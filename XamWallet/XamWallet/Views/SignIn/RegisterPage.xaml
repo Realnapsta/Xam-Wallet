@@ -3,8 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
+             xmlns:viewModel="clr-namespace:XamWallet.ViewModels" mc:Ignorable="d"
              x:Class="XamWallet.Views.SignIn.RegisterPage">
+
+    <ContentPage.BindingContext>
+        <viewModel:RegisterViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.Content>
         
             <StackLayout Margin="5,5" VerticalOptions="Center" Spacing="5" x:Name="backgroundStack">
@@ -13,14 +17,43 @@
                     <Label Text=" CREATE NEW ACCOUNT" TextColor="{StaticResource Key=PrimaryColor}" HorizontalOptions="Center" />
 
                     <Label Text="Create Account" Margin="10" FontSize="30" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" />
-                    <Entry Placeholder="First Name" x:Name="FirstName" HorizontalOptions="FillAndExpand" />
-                    <Entry Placeholder="Last Name" x:Name="LastName" HorizontalOptions="FillAndExpand" />
-                    <Entry Placeholder="Email" x:Name="Email" HorizontalOptions="FillAndExpand" />
-                    <Entry Placeholder="Mobile Number" x:Name="MobileNumber" HorizontalOptions="FillAndExpand" />
-                    <Entry Placeholder="Password" IsPassword="true" x:Name="password" HorizontalOptions="FillAndExpand" />
-                    <Entry Placeholder="confirm password" IsPassword="true" x:Name="confirmPassword" HorizontalOptions="FillAndExpand" />
-                    <Button Text="Register" x:Name="registerbtn" HorizontalOptions="FillAndExpand" />
-                    <Button Text="Already have account?, log in" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+                    <Entry Placeholder="First Name"
+                           x:Name="firstName"
+                           Text="{Binding FirstName}"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <Entry Placeholder="Last Name"
+                           x:Name="lastName"
+                           Text="{Binding LastName}"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <Entry Placeholder="Email"
+                           x:Name="email"
+                           Text="{Binding Email}"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <Entry Placeholder="Mobile Number"
+                           x:Name="phoneNumber"
+                           Text="{Binding PhoneNumber}"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <Entry Placeholder="Password"
+                           IsPassword="true"
+                           x:Name="password"
+                           Text="{Binding Password"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <Entry Placeholder="confirm password"
+                           IsPassword="true"
+                           x:Name="confirmPassword"
+                           Text="{Binding ConfirmPassword}"
+                           HorizontalOptions="FillAndExpand" />
+
+                    <Button Text="Register"
+                            x:Name="registerbtn"
+                            Command="{Binding RegisterCommand}"
+                            Clicked="Registerbtn_Clicked"
+                            HorizontalOptions="FillAndExpand" />
                     <ActivityIndicator x:Name="activityindicator" IsRunning="{Binding IsBusy}" VerticalOptions="Center" HorizontalOptions=" Center" Color="Lime" />
                 </StackLayout>
             </StackLayout>

@@ -2,6 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamWallet.Views.Main.ServicesPage">
+
+
+
     <ContentPage.Content>
+
+        <Frame>
+            <StackLayout>
+                <TableView>
+                    <TableRoot>
+                        <TableSection>
+                            <ViewCell>
+                                <Label Text="MTN MOBILE MONEY SERVICES"></Label>
+
+                                <ImageButton Source="">
+
+                                </ImageButton>
+
+                            </ViewCell>
+                        </TableSection>
+
+                        </TableRoot>
+                    </TableView>
+
+
+            </StackLayout>
+
+        </Frame>
+
+
     </ContentPage.Content>
 </ContentPage>

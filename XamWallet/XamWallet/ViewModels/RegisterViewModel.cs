@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
+using XamWallet.Services;
 
 namespace XamWallet.ViewModels
 {
     class RegisterViewModel
     {
+        IdentityRequest identity = new IdentityRequest();
+
 
         public string UserName { get; set; }
 
@@ -24,6 +29,8 @@ namespace XamWallet.ViewModels
         [DataType(DataType.PhoneNumber)]
         public string PhoneNumber { get; set; }
 
+        public string Message;
+
 
 
         [Required]
@@ -34,5 +41,21 @@ namespace XamWallet.ViewModels
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+      public ICommand RegisterCommand
+        {
+            get
+            {
+                return new Command(async() =>
+                    {
+                     var isSuccess = await identity.RegisterUserAsync(Email, Password, ConfirmPassword, PhoneNumber, FirstName, LastName, UserName);
+                        if (isSuccess)
+                            Message = "Registered SucessFully";
+                        else
+                            Message = "Something Went Wrong";
+                });
+            }
+        }
+            
     }
 }

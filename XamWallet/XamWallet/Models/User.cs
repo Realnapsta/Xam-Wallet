@@ -6,12 +6,12 @@ namespace XamWallet.Models
 {
    public class User
     {
-        public string userName { get; set; }
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string email { get; set; }
-        public string phoneNumber { get; set; }
-        public string password { get; set; }
-        public string confirmPassword { get; set; }
+        public string UserName { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Password { get; set; }
+        public string ConfirmPassword { get; set; }
     }
 }

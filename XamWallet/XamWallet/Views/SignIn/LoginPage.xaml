@@ -44,7 +44,6 @@
                     </Grid>
                 </Grid>
                 <StackLayout Grid.Row="2" BackgroundColor="#ffffff">
-                    <Button Text="Dont'Have Account? SignUp" BackgroundColor="Transparent" Clicked="registerbtn_clicked" TextColor="#01B375" VerticalOptions="FillAndExpand" />
                     <Label HeightRequest="1" Text="" BackgroundColor="#e3e3e3" />
                 </StackLayout>
             </Grid>
