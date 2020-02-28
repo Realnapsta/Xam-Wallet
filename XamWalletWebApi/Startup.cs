@@ -38,7 +38,7 @@ namespace XamWalletWebApi
             });
 
             services.AddDbContext<AuthenticationContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("LocalConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("ProductionConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>(
                     options =>

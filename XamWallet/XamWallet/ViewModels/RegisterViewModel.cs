@@ -50,7 +50,7 @@ namespace XamWallet.ViewModels
                     {
                      var isSuccess = await identity.RegisterUserAsync(Email, Password, ConfirmPassword, PhoneNumber, FirstName, LastName, UserName);
                         if (isSuccess)
-                            Message = "Registered SucessFully";
+                            Message = "Registered Sucessfully";
                         else
                             Message = "Something Went Wrong";
                 });
