@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamWallet.Views.Payments.VodafonePaymentPage"
+              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
+
+     <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+        <StackLayout Margin="12"
+                 Padding="24"
+                 Spacing="24"
+                 BackgroundColor="WhiteSmoke"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center">
+
+        <Image Source="vodafoneLogo.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="100" WidthRequest="100"/>
+
+        
+        <Label Text="Please Enter PhoneNumber"
+               FontAttributes="Bold" FontSize="20"
+               TextColor="Black"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Center"/>
+            <Entry 
+               x:Name="phonenumbertxt"
+               HorizontalOptions="Fill"
+               VerticalOptions="Center"
+               Keyboard="Numeric"/>
+
+             <Label Text="Please Confirm PhoneNumber"
+               FontAttributes="Bold"
+                  FontSize="20"
+               TextColor="Black"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Center"/>
+        
+        <Entry 
+               x:Name="confirmPhonenumbertxt"
+               HorizontalOptions="Fill"
+               VerticalOptions="Center"
+               Keyboard="Numeric"/>
+        
+        
+
+         <Label Text="Please Enter Amount in Cedis"
+               FontAttributes="Bold" FontSize="20"
+               TextColor="Black"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Center"/>
+        
+        <Entry 
+               x:Name="amounttxt"
+               HorizontalOptions="Fill"
+               VerticalOptions="Center"
+               Keyboard="Numeric"/>
+        
+        <Button BackgroundColor="{StaticResource PrimaryColor}"
+                TextColor="White" 
+                Text="Submit"
+                x:Name="submitBtn"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Clicked="submitBtn_Clicked"/>
+        
+        <Button BackgroundColor="Red"
+                TextColor="White" 
+                Text="Cancel"
+                x:Name="cancelBtn"
+                HorizontalOptions="Fill"
+                VerticalOptions="Center"
+                Clicked="CancelBtn_Clicked"/>
+        
+        
+                <ActivityIndicator x:Name="activityindicator"
+                                   IsRunning="{Binding IsBusy}"
+                                   VerticalOptions="Center" 
+                                   HorizontalOptions="Center"
+                                   Color="Lime"/>
+
+        
+    </StackLayout>
+
+</pages:PopupPage>
